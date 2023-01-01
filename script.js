@@ -1,5 +1,12 @@
-var consutaCep = fetch("https://viacep.com.br/ws/01001000/json/")
-.then(resposta => resposta.json())
-.then(r => console.log(r))
+async function BuscaEndereco(){
+    try{
+        var consutaCep = await fetch("https://viacep.com.br/ws/01001000/json/")
+        var ConsultaCepConvertida = await consutaCep.json()
+        console.log(ConsultaCepConvertida)
+    }
+    catch (erro){
+        console.log(erro)
+    }
+}
 
-console.log(consutaCep)
+BuscaEndereco()
