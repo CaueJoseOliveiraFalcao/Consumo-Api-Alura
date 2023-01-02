@@ -1,7 +1,7 @@
 async function BuscaEndereco(){
-    try{
-        var consutaCep = await fetch("https://viacep.com.br/ws/01001000/json/")
-        var ConsultaCepConvertida = await consutaCep.json()
+    try {
+        var ConsultaCep = await fetch("https://viacep.com.br/ws/01001000/json/")
+        var ConsultaCepConvertida = await ConsultaCep.json()
         console.log(ConsultaCepConvertida)
     }
     catch (erro){
